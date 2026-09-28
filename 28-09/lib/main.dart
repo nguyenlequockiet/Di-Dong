@@ -44,8 +44,8 @@ class ProfileScreen extends StatelessWidget {
                 borderRadius: BorderRadius.circular(36),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black.withValues(alpha: 0.08),
-                    blurRadius: 16,
+                    color: Colors.black.withValues(alpha: 0.1),
+                    blurRadius: 18,
                     spreadRadius: 2,
                     offset: const Offset(0, 6),
                   ),
@@ -53,41 +53,21 @@ class ProfileScreen extends StatelessWidget {
               ),
               padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 20),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch, // Đảm bảo mọi section căn đều hàng với nhau
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  // 1. TOP BAR
                   _buildTopBar(),
-
                   const SizedBox(height: 18),
-
-                  // 2. AVATAR + THÔNG TIN CÁ NHÂN
                   _buildProfileHeader(),
-
                   const SizedBox(height: 18),
-
-                  // 3. STATS CARD
                   _buildStatsCard(),
-
                   const SizedBox(height: 22),
-
-                  // 4. ABOUT ME
                   _buildAboutMeSection(),
-
                   const SizedBox(height: 20),
-
-                  // 5. SKILLS & EXPERTISE (Thẳng hàng ngang với About Me)
                   _buildSkillsSection(),
-
                   const SizedBox(height: 22),
-
-                  // 6. FEATURED PROJECTS
                   _buildFeaturedProjectsSection(),
-
                   const SizedBox(height: 22),
-
-                  // 7. CONTACT INFORMATION
                   _buildContactSection(),
-
                   const SizedBox(height: 12),
                 ],
               ),
@@ -98,7 +78,6 @@ class ProfileScreen extends StatelessWidget {
     );
   }
 
-  // 1. TOP BAR: Back button, Title, Share button
   Widget _buildTopBar() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -150,7 +129,6 @@ class ProfileScreen extends StatelessWidget {
     );
   }
 
-  // 2. HEADER AVATAR + NAME + BADGE + LOCATION
   Widget _buildProfileHeader() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -159,7 +137,6 @@ class ProfileScreen extends StatelessWidget {
           clipBehavior: Clip.none,
           alignment: Alignment.center,
           children: [
-            // Viền Gradient xung quanh Avatar
             Container(
               padding: const EdgeInsets.all(3.5),
               decoration: const BoxDecoration(
@@ -202,7 +179,6 @@ class ProfileScreen extends StatelessWidget {
                 ),
               ),
             ),
-            // Verified Badge (Tick xanh góc dưới bên phải)
             Positioned(
               bottom: 4,
               right: 4,
@@ -240,7 +216,6 @@ class ProfileScreen extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 10),
-        // Location Pill
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
           decoration: BoxDecoration(
@@ -271,7 +246,6 @@ class ProfileScreen extends StatelessWidget {
     );
   }
 
-  // 3. STATS CARD (Projects, Experience, Rating)
   Widget _buildStatsCard() {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 8),
@@ -362,7 +336,6 @@ class ProfileScreen extends StatelessWidget {
     );
   }
 
-  // 4. ABOUT ME
   Widget _buildAboutMeSection() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -388,7 +361,6 @@ class ProfileScreen extends StatelessWidget {
     );
   }
 
-  // 5. SKILLS & EXPERTISE (Căn thẳng lề trái ngang hàng với About Me)
   Widget _buildSkillsSection() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -443,7 +415,6 @@ class ProfileScreen extends StatelessWidget {
     );
   }
 
-  // 6. FEATURED PROJECTS
   Widget _buildFeaturedProjectsSection() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -556,7 +527,6 @@ class ProfileScreen extends StatelessWidget {
     );
   }
 
-  // 7. CONTACT INFORMATION
   Widget _buildContactSection() {
     return Container(
       decoration: BoxDecoration(
