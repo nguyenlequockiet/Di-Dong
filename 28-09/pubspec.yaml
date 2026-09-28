@@ -1,0 +1,20 @@
+name: layout_demo
+description: "Flutter layout demo"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.13.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - images/
+  
+    - images/avt.jpg
+    - images/prj1.jpg
+    - images/prj2.jpg
